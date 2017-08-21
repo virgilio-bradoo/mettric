@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="mettric.list">
+      <field name="name">mettric list</field>
+      <field name="model">mettric.mettric</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="mettric.action_window">
+      <field name="name">mettric window</field>
+      <field name="res_model">mettric.mettric</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="mettric.action_server">
+      <field name="name">mettric server</field>
+      <field name="model_id" ref="model_mettric_mettric"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="mettric" id="mettric.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="mettric.menu_1" parent="mettric.menu_root"/>
+    <menuitem name="Menu 2" id="mettric.menu_2" parent="mettric.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="mettric.menu_1_list" parent="mettric.menu_1"
+              action="mettric.action_window"/>
+    <menuitem name="Server to list" id="mettric" parent="mettric.menu_2"
+              action="mettric.action_server"/>
+    -->
+  </data>
+</odoo>
