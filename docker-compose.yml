@@ -6,7 +6,7 @@ services:
         volumes:
             - /var/run/docker.sock:/tmp/docker.sock:ro
     odoo:
-        image: mettric-enterprise
+        image: virgiliosantos/mettric-enterprise
         ports:
             - "8069:8069"
         links:
