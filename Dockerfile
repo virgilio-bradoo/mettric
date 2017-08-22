@@ -1,4 +1,4 @@
-FROM bradoo-base-image
+FROM virgiliosantos/bradoo-base-image
 
 COPY odoo.conf /etc/odoo/
 COPY _.sh /home/odoo
