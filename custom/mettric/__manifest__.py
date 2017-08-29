@@ -24,7 +24,6 @@
                 'br_data_account', 'br_base', 'br_account', 'br_nfe',
                 'br_nfse', 'br_boleto', 'sync_numero_nfse_bradoo',
                 'coa_bradoo', 'ir_csll_bradoo', 'reemissao_nfs_bradoo'
-
                 ],
 
     # always loaded
