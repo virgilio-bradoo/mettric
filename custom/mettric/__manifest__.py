@@ -3,33 +3,37 @@
     'name': "mettric",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Módulo que carrega os módulos básicos e dados básicos da Mettric
+        """,
 
     'description': """
-        Long description of module's purpose
+        Módulo que carrega os módulos base: Contabilidade, NFse, Localização Brasileira, Boleto e CNAB
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Virgílio Santos, BradooTech",
+    'website': "http://www.bradootech.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Specific Industry Applications',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'account', 'br_cnab', 'br_zip', 'br_account_einvoice',
+                'br_data_account', 'br_base', 'br_account', 'br_nfe',
+                'br_nfse', 'br_boleto', 'sync_numero_nfse_bradoo',
+                'coa_bradoo', 'ir_csll_bradoo', 'reemissao_nfs_bradoo'
+
+                ],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'data/res_company.xml',
+        'data/br_chart_data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
     ],
+    'post_init_hook': 'execute_default',
 }

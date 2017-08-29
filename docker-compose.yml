@@ -16,9 +16,16 @@ services:
             - VIRTUAL_PORT=8069
         volumes:
             - ./custom:/home/odoo/custom
+            - mettric-odoo-filestore:/home/odoo/data
     db:
         image: postgres
         environment:
             - POSTGRES_USER=odoo
             - POSTGRES_PASSWORD=odoo
+        volumes:
+            - mettric-database:/var/lib/postgres/data
+volumes:
+    mettric-database:
+    mettric-odoo-filestore:
+
 version: '2'
