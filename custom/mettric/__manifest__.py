@@ -29,7 +29,6 @@
     # always loaded
     'data': [
         'data/res_company.xml',
-        'data/br_chart_data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
